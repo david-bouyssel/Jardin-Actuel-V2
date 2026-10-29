@@ -9,7 +9,7 @@ services:
       - MYSQL_PASSWORD=jardin
     volumes:
       - ./data:/docker-entrypoint-initdb.d
-      - ./mysql:/var/lib/mysql
+      - mysql-data:/var/lib/mysql
     networks:
       - symfony
     healthcheck:
@@ -53,4 +53,4 @@ networks:
   symfony:
   
 volumes:
-  data:
+  mysql-data:
