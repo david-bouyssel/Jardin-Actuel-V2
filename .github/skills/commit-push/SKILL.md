@@ -13,4 +13,4 @@ description: Commit and push changes in this repo. Use when the user asks to com
 git commit -m "Short English message" -m "Co-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>"
 ```
 
-4. Let the user do the git push alone. Don't do it. Just tell him that the repo is ready is pushù
+4. Let the user do the git push alone. Don't do it. Just tell him that the repo is ready to push
