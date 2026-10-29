@@ -5,6 +5,7 @@
 
 <p align="center">
     <img src="https://img.shields.io/badge/MariaDB-v11.7.2-blue">
+    <img src="https://img.shields.io/badge/PHP-v8.5-blue">
     <img src="https://img.shields.io/badge/Symfony-v6.2-blue">
     <img src="https://img.shields.io/badge/Angular-v15.2.0-blue">
     <img src="https://img.shields.io/badge/docker--build-passing-brightgreen">
@@ -26,6 +27,9 @@ Pour démarrer le projet
 docker compose up -d
 ```
 
+
+Le backend est reconstruit localement (`backend/Dockerfile`) : l'application de l'image officielle `2-0-0` est copiée sur une image `php:8.5-cli`. Pour appliquer une nouvelle version de PHP : `docker compose up -d --build`.
+Vérification : `docker exec jardin-actuel-symfony php -v`
 
 ## Pour éteindre le projet
 Assurez vous d'être dans le dossier du projet (là où se trouve le fichier docker-compose.yml)

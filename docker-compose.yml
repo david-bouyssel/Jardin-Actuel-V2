@@ -21,10 +21,12 @@ services:
 
   jardin-actuel-symfony:
     container_name: jardin-actuel-symfony
-    image: ghcr.io/openclassrooms-student-center/jardin-actuel-backend:2-0-0
+    build: ./backend
+    image: jardin-actuel-backend:php85
     ports:
       - 8081:8081    
     environment:
+      - APP_DEBUG=0
       - DATABASE_URL=mysql://root:jardin@jardin-actuel-bdd:3306/jardin_actuel?serverVersion=8&charset=utf8mb4
     depends_on:
       jardin-actuel-bdd:
